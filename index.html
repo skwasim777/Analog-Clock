@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Anlog Clock</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(7px);
+        z-index: -1;
+      }
 
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
+    <div class="background-container"></div>
     <div class="constainer">
       <div class="clock">
-        <div style="--clr: #ff3d58; --h:72px" id="hour" class="hand">
+        <div style="--clr: #ff3d58; --h: 72px" id="hour" class="hand">
           <i></i>
         </div>
-        <div style="--clr: #00a6ff; --h:84px" id="minute" class="hand">
+        <div style="--clr: #00a6ff; --h: 84px" id="minute" class="hand">
           <i></i>
         </div>
-        <div style="--clr: #ffff; --h:94px" id="second" class="hand">
+        <div style="--clr: #ffff; --h: 94px" id="second" class="hand">
           <i></i>
         </div>
         <span style="--i: 1"><b>1</b></span>
